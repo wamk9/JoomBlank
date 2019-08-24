@@ -1,0 +1,33 @@
+// FRONTEND LESS
+// ==========================================================================
+
+// This file will be used to generate the template.css
+
+@import 'less/variable.less';
+
+@import 'less/modules/mod_menu.less';
+@import 'less/modules/mod_footer.less';
+
+html 
+{
+  max-width: 100vw;
+}
+
+body 
+{
+  min-width: 100%;
+}
+
+main
+{
+  /* Calc the size of screen to set footer for bottom. */
+  min-height: ~'calc(100vh - @{navbar-size} + @{footer-size})';
+  padding-top: @navbar-size;
+}
+
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}

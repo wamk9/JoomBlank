@@ -1,0 +1,34 @@
+.navbar {
+	min-height: 60px;
+}
+.bg-luccas {
+	background-color: #103760;
+	border-color: #103760;
+	border-radius: 0;
+}
+#brand {
+	max-height: 25px;
+}
+.footer {
+	background-color: #103760;
+	width: 100%;
+	min-height: 30px;
+}
+.developer-info {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.developer-info div a {
+	color: white;
+}
+html {
+	max-width: 100vw;
+}
+body {
+	min-width: 100%;
+}
+main {
+	min-height: calc(100vh - 60px + 30px);
+	padding-top: 60px;
+}

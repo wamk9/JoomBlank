@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+
+<extension version="3" type="template" client="site" method="upgrade">
+
+	<name>Joomblank</name>
+	<creationDate>xxxx-xx-xx</creationDate>
+	<author>Developer Name</author>
+	<copyright>Copyright © 2019 Developer Name</copyright>
+	<authorEmail>developer@mail.com</authorEmail>
+	<authorUrl>https://developerwebsite.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+		<h1>Thanks to install Joomblank!</h1>
+		<p>Be free to modify anything (principally this description)!</p>
+	]]></description>
+
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+    <filename>index.php</filename>
+		<filename>logic.php</filename>
+		<filename>offline.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>navbar</position>
+		<position>footer</position>
+		<position>debug</position>
+	</positions>
+
+</extension>
