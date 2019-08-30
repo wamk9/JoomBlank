@@ -3,7 +3,8 @@
 
 html,
 body {
-  height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
@@ -12,32 +13,63 @@ body {
 	font-size: 1rem;
 	margin: 0;
 	padding: 0;
-	text-align: center;
+	text-align: center !important;
+    background: #fff url("../images/background-offline.jpg") no-repeat center;
+    background-size: cover !important;
 }
 
 img {
 	border: 0 none;
 }
 
+footer
+{
+  	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f7f7+0,ededed+100 */
+	background: #f7f7f7; /* Old browsers */
+	background: -moz-linear-gradient(top, #f7f7f7 0%, #ededed 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #f7f7f7 0%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #f7f7f7 0%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+    padding: 10px initial !important;
+  	position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#developer-link
+{
+  color: black;
+  text-decoration: none;
+}
+
+#logo
+{
+  margin: 10px auto;
+  width: 100%;
+}
+
 #frame {
 	margin: 0 auto;
 	padding: 20px;
 	max-width: 100%;
+    margin-bottom: 20px !important;
 }
 
 @media (min-width: 768px) {
   #frame {
-    padding-top: 32vh;
-    max-width: 400px;
+    margin-top: 5vh;
+    margin-bottom: 0;
+    max-width: 450px;
   }
 }
 
 .inputbox {
-	width: 130px;
+  width: 100%;
 }
 
 form {
 	margin: auto;
+  	width: 100%;
 }
 
 form p {
@@ -49,11 +81,14 @@ form fieldset {
 	border: 0 none;
 	margin: 0;
 	padding: 0.2em;
+    width: 100%;
+
 }
 
 input {
 	padding: 5px;
   font-size: 1rem;
+  width: 100%;
 }
 
 input.button {
@@ -63,6 +98,8 @@ input.button {
 
 form p {
 	padding: 0.3em 0;
+    width: 100%;
+
 }
 
 label[for="remember"] {

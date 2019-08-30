@@ -30,30 +30,6 @@ $doc->addStyleSheet($tpath.'/css/offline.css');
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <!-- Bootstrap (CDN - FIM) -->
 	
-	<!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo '/templates/'.$this->template; ?>/img/favicon/apple-touch-icon.png?v=2019-1">
-  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo '/templates/'.$this->template; ?>/img/favicon/favicon-32x32.png?v=2019-1">
-  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo '/templates/'.$this->template; ?>/img/favicon/favicon-16x16.png?v=2019-1">
-  <link rel="manifest" href="<?php echo '/templates/'.$this->template; ?>/img/favicon/site.webmanifest?v=2019-1">
-  <link rel="mask-icon" href="<?php echo '/templates/'.$this->template; ?>/img/favicon/safari-pinned-tab.svg?v=2019-1" color="#5bbad5">
-  <link rel="shortcut icon" href="<?php echo '/templates/'.$this->template; ?>/img/favicon/favicon.ico?v=2019-1">
-  <meta name="apple-mobile-web-app-title" content="Agropecuaria Agromix">
-  <meta name="application-name" content="Agropecuária Agromix">
-  <meta name="msapplication-TileColor" content="#00a54f">
-  <meta name="msapplication-config" content="<?php echo '/templates/'.$this->template; ?>/img/favicon/browserconfig.xml?v=2019-1">
-  <meta name="theme-color" content="#00a54f">
-  <!-- /Favicon -->
-    
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122601793-7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'UA-122601793-7');
-  </script>
-
 </head>
 
 <body>
@@ -96,7 +72,7 @@ $doc->addStyleSheet($tpath.'/css/offline.css');
 
   </div>
   <footer>
-    <p class="text-center align-middle"><a id="startproj-link" href="https://startproj.com/">Desenvolvido por <img src="<?php echo $tpath; ?>/img/logotipo-startproj.png" class="d-inline"></a></p>
+    <p class="text-center align-middle"><a id="developer-link" href="https://startproj.com/">Desenvolvido por <img src="<?php echo $tpath; ?>/images/dev-brand-inv.png" class="d-inline"></a></p>
   </footer>
 
 </body>
