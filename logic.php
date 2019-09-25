@@ -13,23 +13,38 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // unset
-// unset($doc->_scripts[$this->baseurl .'/media/jui/js/jquery.min.js']);
-// unset($doc->_scripts[$this->baseurl .'/media/jui/js/jquery-noconflict.js']);
-// unset($doc->_scripts[$this->baseurl .'/media/jui/js/jquery-migrate.min.js']);
-// unset($doc->_scripts[$this->baseurl .'/media/system/js/caption.js']);
-// if (isset($doc->_script['text/javascript']))
-// {
-//     $doc->_script['text/javascript'] = preg_replace('%jQuery\(window\)\.on\(\'load\'\,\s*function\(\)\s*\{\s*new\s*JCaption\(\'img.caption\'\);\s*}\s*\);\s*%', '', $doc->_script['text/javascript']);
-//     $doc->_script['text/javascript'] = preg_replace("%\s*jQuery\(document\)\.ready\(function\(\)\{\s*jQuery\('\.hasTooltip'\)\.tooltip\(\{\"html\":\s*true,\"container\":\s*\"body\"\}\);\s*\}\);\s*%", '', $doc->_script['text/javascript']);
-//     if (empty($doc->_script['text/javascript']))
-//     {
-//         unset($doc->_script['text/javascript']);
-//     }
-// }
+unset($doc->_scripts[$this->baseurl .'/media/jui/js/jquery.min.js']);
+unset($doc->_scripts[$this->baseurl .'/media/jui/js/jquery-noconflict.js']);
+unset($doc->_scripts[$this->baseurl .'/media/jui/js/jquery-migrate.min.js']);
+unset($doc->_scripts[$this->baseurl .'/media/system/js/caption.js']);
+if (isset($doc->_script['text/javascript']))
+{
+  $doc->_script['text/javascript'] = preg_replace('%jQuery\(window\)\.on\(\'load\'\,\s*function\(\)\s*\{\s*new\s*JCaption\(\'img.caption\'\);\s*}\s*\);\s*%', '', $doc->_script['text/javascript']);
+  $doc->_script['text/javascript'] = preg_replace("%\s*jQuery\(document\)\.ready\(function\(\)\{\s*jQuery\('\.hasTooltip'\)\.tooltip\(\{\"html\":\s*true,\"container\":\s*\"body\"\}\);\s*\}\);\s*%", '', $doc->_script['text/javascript']);
+  if (empty($doc->_script['text/javascript']))
+  {
+    unset($doc->_script['text/javascript']);
+  }
+}
 
-// css
-// $doc->addStyleSheet($tpath.'/css/custom.css');
-$doc->addStyleSheet($tpath.'/build/style.css');
+/* jQuery 3.4.1 */
+$doc->addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js');
+
+/* Bootstrap 4.3.1 */
+$doc->addStyleSheet('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css');
+$doc->addScript('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js');
+$doc->addScript('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js');
+
+/* popper.js (for tooltip) */
+$doc->addScript('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js');
+
+/* Font Awesome 5.11.2 */
+$doc->addStyleSheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
+//$doc->addScript('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js');
+
+/* Template Stylesheet (Converted on Less/Scss) */
+$doc->addStyleSheet("{$tpath}/css/template.css");
+
 
 function CreateOpenGraphFacebook()
 {
@@ -55,8 +70,8 @@ function CreateOpenGraphFacebook()
     }
   }
   $doc->addCustomTag('<meta property="og:url" content="'.$doc->base.$doc->link.'"/>');
-  $doc->addCustomTag('<meta property="og:site_name" content="Luccas Caminski Advocacia"/>');
-  $doc->addCustomTag('<meta property="og:fb:admins" content="Luccas-Caminski-Advogado-Capão-da-Canoa-795181010865752"/>');
+  $doc->addCustomTag('<meta property="og:site_name" content="Website Name"/>');
+  $doc->addCustomTag('<meta property="og:fb:admins" content="website-facebook-link"/>');
 
   $doc->addCustomTag('<!-- ./opengraph-facebook -->');
 }
