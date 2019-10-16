@@ -44,6 +44,6 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
   
   <?php include_once 'html/modules/mod_footer.php'; ?>
     
-  <script src="<?php echo "/templates/{$this->template}/js/script.js"; ?>"></script>
+  <?php $scriptsAtEnd -> render(); ?>
 </body>
 </html>
