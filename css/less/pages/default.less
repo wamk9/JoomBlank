@@ -1,49 +1,23 @@
-#page-logo
+h1,a
 {
-  max-width: 975px; 
-  float: right;
-  padding-right: 0px;
+  color: @primary
 }
 
-a
+hr
 {
-  color: @text-color;
+  border-color: @primary;
 }
 
 a:hover
 {
   color: @link-focus-color;
-}
-
-h1,h2,h3,h4,h5,h6,p
-{
-  margin-left: @ml-xs-default;
-  margin-right: @mr-xs-default;
-}
-
-.heading-title
-{
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-}
-
-
-.bg-brand
-{
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#001037+0,204770+100 */
-  background: @gradient-primary; /* Old browsers */
-  background: -moz-linear-gradient(top, @gradient-primary 0%, @gradient-secondary 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, @gradient-primary 0%,@gradient-secondary 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, @gradient-primary 0%,@gradient-secondary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@gradient-primary', endColorstr='@gradient-secondary',GradientType=0 ); /* IE6-9 */
-  
-  z-index: -1;
+  text-decoration: none;
 }
 
 
 @media (min-width: 576px) 
 {
-  h1,h2,h3,h4,h5,h6,p
+  main
   {
     margin-left: @ml-sm-default;
     margin-right: @mr-sm-default;
@@ -52,7 +26,7 @@ h1,h2,h3,h4,h5,h6,p
 
 @media (min-width: 768px) 
 {
-  h1,h2,h3,h4,h5,h6,p
+  main
   {
     margin-left: @ml-md-default;
     margin-right: @mr-md-default;
@@ -62,35 +36,17 @@ h1,h2,h3,h4,h5,h6,p
 
 @media (min-width: 992px) 
 {
-  h1,h2,h3,h4,h5,h6,p
+  main
   {
     margin-left: @ml-lg-default;
     margin-right: @mr-lg-default;
   }
   
-  .bg-brand
-  {
-    min-height: ~'calc(100vh - @{navbar-size})';
-    position: fixed;
-    right: 0;
-    
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#204770+0,001037+100 */
-    background: @gradient-secondary; /* Old browsers */
-    background: -moz-linear-gradient(left, @gradient-secondary 0%, @gradient-primary 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, @gradient-secondary 0%,@gradient-primary 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, @gradient-secondary 0%,@gradient-primary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@gradient-secondary', endColorstr='@gradient-primary',GradientType=1 ); /* IE6-9 */
-  }
-  
-  #page-logo
-  { 
-    transform: translateY(50%);
-  }
 }
 
 @media (min-width: 1200px) 
 {
-  h1,h2,h3,h4,h5,h6,p
+  main
   {
     margin-left: @ml-xl-default;
     margin-right: @mr-xl-default;

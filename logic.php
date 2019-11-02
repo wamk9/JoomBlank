@@ -25,6 +25,8 @@ $this->setGenerator(null);
 
 // functions
 
+
+
 function CreateOpenGraphFacebook()
 {
   $app = JFactory::getApplication();
@@ -93,6 +95,8 @@ $doc->addStyleSheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/
  * Used to load images/videos/iframes only when element at on screen
  */
 $scriptsAtEnd -> addScript('https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/12.0.3/lazyload.min.js');
+
+//print_r($doc->_scripts);
 
 /* Template Scripts
  * 

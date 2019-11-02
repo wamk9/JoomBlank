@@ -8,20 +8,25 @@
 @import 'less/modules/mod_menu.less';
 @import 'less/modules/mod_footer.less';
 
+@import 'less/pages/default.less';
+
 html 
 {
   max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body 
 {
-  min-width: 100%;
+  max-width: 100%;
+  background-color: @body-color;
+  color: @text-color;
 }
 
 main
 {
   /* Calc the size of screen to set footer for bottom. */
-  min-height: ~'calc(100vh - @{navbar-size} + @{footer-size})';
+  min-height: ~'calc(100vh - @{navbar-size} - @{footer-size})';
   padding-top: @navbar-size;
 }
 
