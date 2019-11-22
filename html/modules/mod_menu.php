@@ -1,6 +1,6 @@
 <div id="navbar-top" class="lazy" data-img-name="navbarTopBg" data-img-type="bg"></div>
 <a class="navbar-brand text-center" href="/">
-  <span id="brand" class="lazy" data-img-name="brand" data-img-type="bg"></span>
+  <span id="brand" class="lazy" data-bg="url(<?php echo "/templates/{$this->template}/images/default/brand.png";?>)"></span>
 </a>
 <nav class="navbar sticky-top align-items-start navbar-dark navbar-expand-xl navbar-dark bg-theme">
   <?php 

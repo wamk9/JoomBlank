@@ -102,7 +102,6 @@ $scriptsAtEnd -> addScript('https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyl
  * 
  */
 $scriptsAtEnd -> addScript("{$tpath}/js/script.js");
-$scriptsAtEnd -> addScript("{$tpath}/js/images.js");
 
 /* Template Stylesheet (Converted on Less/Scss) */
 $doc->addStyleSheet("{$tpath}/css/template.css");

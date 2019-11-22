@@ -1,4 +1,4 @@
-<footer class="footer lazy" data-img-name="footerBg" data-img-type="bg" >
+<footer class="footer lazy" data-bg="url(<?php echo "/templates/{$this->template}/images/default/footer-bg.png";?>)">
   <div class="container">
     <div class="row">
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center text-lg-left">
