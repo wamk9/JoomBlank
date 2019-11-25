@@ -24,6 +24,6 @@ else
 }
 
 ?>
-<span class="separator"<?php echo $title; ?>>
+<span class="separator text-center" <?php echo $title; ?>>
 	<?php echo $linktype; ?>
 </span>

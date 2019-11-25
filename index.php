@@ -38,9 +38,8 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
           include_once 'html/pages/default.php';
           break;
       }
-       
     ?>
-  </main>
+  </main>    
   
   <?php include_once 'html/modules/mod_footer.php'; ?>
     

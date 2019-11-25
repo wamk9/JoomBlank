@@ -15,6 +15,6 @@ defined('_JEXEC') or die;
 /* Used to create a dropdown header to navbar */
 ?>
 
-<a class="nav-link dropdown-toggle" href="#" id="dropdown-<?php echo $item->id; ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<a class="nav-link dropdown-toggle text-center" href="#" id="dropdown-<?php echo $item->id; ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <?php echo $item->title; ?>
 </a>

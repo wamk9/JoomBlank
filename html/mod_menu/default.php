@@ -116,7 +116,7 @@ foreach ($list as $i => &$item)
     endswitch;
 
     if ($item->parent)
-      echo '<div class="dropdown-menu bg-dark">';
+      echo '<div class="dropdown-menu dropdown-menu-right bg-theme">';
 	else
       echo '</li>';
   }

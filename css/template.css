@@ -1,34 +1,136 @@
 .navbar {
-	min-height: 60px;
+	min-height: 74px;
 }
-.bg-luccas {
+.navbar-nav {
+	width: 100%;
+}
+.navbar-brand {
+	margin-right: -56px;
+}
+.navbar-brand img {
+	height: calc(74px - .6250rem - 1rem);
+}
+.bg-theme {
 	background-color: #103760;
 	border-color: #103760;
 	border-radius: 0;
 }
-#brand {
-	max-height: 25px;
+.dropdown-menu.show.bg-theme {
+	background-color: #091e34;
+	border-color: #091e34;
+}
+.dropdown-menu.show {
+	width: 100%;
+}
+.nav-item .nav-link,
+.nav-item .separator,
+.navbar-brand {
+	font-size: 1.75rem;
+	font-weight: bold;
+	text-align: right;
+}
+.nav-item {
+	width: 100%;
+}
+.nav-item .separator {
+	display: none !important;
+	color: white;
+}
+.nav-item.divider {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+@media (min-width: 576px) {
+	.nav-item .nav-link,
+	.nav-item .separator {
+		text-align: center;
+	}
+}
+@media (min-width: 1200px) {
+	.nav-item {
+		width: inherit;
+	}
+	.nav-item .separator {
+		display: block !important;
+	}
+	.navbar-brand {
+		margin-right: 1rem;
+	}
+	.dropdown-menu.show {
+		width: inherit;
+	}
+	.navbar-nav {
+		width: inherit;
+	}
 }
 .footer {
 	background-color: #103760;
 	width: 100%;
-	min-height: 30px;
+	min-height: 32px;
+	z-index: 1400;
+}
+.link-white {
+	color: white;
+}
+.link-white:hover {
+	color: #cccccc;
+	text-decoration: none;
 }
 .developer-info {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	font-weight: 600;
+	padding-bottom: 0.5rem;
 }
 .developer-info div a {
 	color: white;
 }
+h1,
+a {
+	color: #103760;
+}
+hr {
+	border-color: #103760;
+}
+a:hover {
+	color: #010509;
+	text-decoration: none;
+}
+@media (min-width: 576px) {
+	main {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+}
+@media (min-width: 768px) {
+	main {
+		margin-left: 3rem;
+		margin-right: 3rem;
+	}
+}
+@media (min-width: 992px) {
+	main {
+		margin-left: 4rem;
+		margin-right: 4rem;
+	}
+}
+@media (min-width: 1200px) {
+	main {
+		margin-left: 4rem;
+		margin-right: 4rem;
+	}
+}
 html {
 	max-width: 100vw;
+	overflow-x: hidden;
 }
 body {
-	min-width: 100%;
+	max-width: 100%;
+	background-color: #fafafa;
+	color: #000;
 }
 main {
-	min-height: calc(100vh - 60px + 30px);
-	padding-top: 60px;
+	min-height: calc(100vh - 74px - 32px);
+	padding-top: 74px;
 }
