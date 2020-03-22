@@ -1,14 +1,14 @@
 <?php defined( '_JEXEC' ) or die;
 
 //class
-class ScriptAtEnd
+class ScriptPosition
 {
   public $scripts;
 
-  public function addScript($script) { $this -> scripts .= '<script src="'.$script.'" type="text/javascript"></script>'; }
+  public function addScript($script, $position=1) {	$this -> scripts[$position] .= '<script src="'.$script.'" type="text/javascript"></script>'; }
   
-  public function render() { echo $this -> scripts; }
-}   
+  public function render($position=1) { echo $this -> scripts[$position]; }
+} 
 
 // variables
 $app = JFactory::getApplication();
@@ -18,7 +18,7 @@ $active = $app->getMenu()->getActive();
 $params = $app->getParams();
 $pageclass = $params->get('pageclass_sfx');
 $tpath = $this->baseurl.'/templates/'.$this->template;
-$scriptsAtEnd = new ScriptAtEnd();
+$scriptPosition = new ScriptPosition();
 
 // generator tag
 $this->setGenerator(null);
@@ -74,11 +74,11 @@ if (isset($doc->_script['text/javascript']))
 }
 
 /* jQuery 3.4.1 */
-$doc->addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js');
+$scriptPosition -> addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', 0);
 
 /* Bootstrap 4.3.1 */
 $doc->addStyleSheet('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css');
-$scriptsAtEnd -> addScript('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js');
+$scriptPosition -> addScript('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js');
 //$doc->addScript('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js');
 
 /* popper.js (for tooltip) */
@@ -86,7 +86,7 @@ $scriptsAtEnd -> addScript('https://cdnjs.cloudflare.com/ajax/libs/twitter-boots
 
 /* Font Awesome 5.11.2 */
 $doc->addStyleSheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
-//$doc->addScript('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js');
+//$scriptPosition->addScript('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js');
 
 
 
@@ -94,14 +94,14 @@ $doc->addStyleSheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/
  * 
  * Used to load images/videos/iframes only when element at on screen
  */
-$scriptsAtEnd -> addScript('https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/12.0.3/lazyload.min.js');
+$scriptPosition -> addScript('https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/12.0.3/lazyload.min.js');
 
 //print_r($doc->_scripts);
 
 /* Template Scripts
  * 
  */
-$scriptsAtEnd -> addScript("{$tpath}/js/script.js");
+$scriptPosition -> addScript("{$tpath}/js/script.js");
 
 /* Template Stylesheet (Converted on Less/Scss) */
 $doc->addStyleSheet("{$tpath}/css/template.css");
