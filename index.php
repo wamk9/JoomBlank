@@ -9,6 +9,8 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
   <?php /* Scripts using CDN links are storage on logic.php file */ ?>
+  <?php $scriptPosition -> render(0); ?>
+
   <jdoc:include type="head" />
 	
   <!-- Favicon -->
@@ -43,6 +45,6 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
   
   <?php include_once 'html/modules/mod_footer.php'; ?>
     
-  <?php $scriptsAtEnd -> render(); ?>
+  <?php $scriptPosition -> render(); ?>
 </body>
 </html>
